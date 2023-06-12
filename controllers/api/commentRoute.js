@@ -14,6 +14,7 @@ try {
     res.status(400).json(err)
 }
 })
+/// delete a comment
 router.delete('/:id', isAuth, async (req, res) => {
     try {
         const deleteComment = await Comment.destroy({
